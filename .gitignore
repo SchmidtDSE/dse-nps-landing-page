@@ -5,3 +5,6 @@ resources/
 
 # Editor
 .vscode/
+
+# Devpod internal
+.devcontainer/.devpod-internal/
