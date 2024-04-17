@@ -10,8 +10,8 @@ The core of this collaboration comes from a need to better understand the severi
 This tool uses publicly available satellite imagery (currently, the European Space Agency's _Sentinel 2_ imagery) to estimate fire severity metrics on-demand.
 
 {{< cards >}}
-{{< card link="/dse-nps-landing-page//about/how_to/" title="How To" subtitle="How to get started using the tool, using a fire perimeter and date range" icon="map" >}}
-{{< card link="/dse-nps-landing-page//about/methodology/" title="Methodology" subtitle="Underlying methodology and assumptions for disturbance severity metrics used within the tool" icon="academic-cap" >}}
-{{< card link="/dse-nps-landing-page//about/dev_notes/" title="Developer Notes" subtitle="Development notes regarding known issues with the tool" icon="code" >}}
-{{< card link="/dse-nps-landing-page//about/key_references/" title="Key References" subtitle="Key publications, whitepapers, and articles that informed the tool's methodological approach" icon="library" >}}
+{{< card link="/dse-nps-landing-page/about/how_to/" title="How To" subtitle="How to get started using the tool, using a fire perimeter and date range" icon="map" >}}
+{{< card link="/dse-nps-landing-page/about/methodology/" title="Methodology" subtitle="Underlying methodology and assumptions for disturbance severity metrics used within the tool" icon="academic-cap" >}}
+{{< card link="/dse-nps-landing-page/about/dev_notes/" title="Developer Notes" subtitle="Development notes regarding known issues with the tool" icon="code" >}}
+{{< card link="/dse-nps-landing-page/about/key_references/" title="Key References" subtitle="Key publications, whitepapers, and articles that informed the tool's methodological approach" icon="library" >}}
 {{< /cards >}}

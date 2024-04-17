@@ -56,7 +56,7 @@ params:
     displayTitle: false
     displayLogo: true
     logo:
-      path: /static/feedback.png
+      path: /dse-nps-landing-page/static/feedback.png
       link: https://form.asana.com/?k=cSbLLW6qj84vrOaG5XhMtw&d=68745051195273
       width: 100px
       height: 30px
@@ -67,4 +67,4 @@ params:
   enableInlineShortcodes: true
 
   assets:
-    favicon: /static/favicon.ico
+    favicon: /dse-nps-landing-page/static/favicon.ico
