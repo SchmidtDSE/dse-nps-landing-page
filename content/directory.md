@@ -1,5 +1,5 @@
 ---
-title: Demo Map
+title: Directory
 type: tool
 iframe: "https://tf-rest-burn-severity-ohi6r6qs2a-uc.a.run.app/directory"
 ---
