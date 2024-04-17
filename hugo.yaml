@@ -1,6 +1,5 @@
 # Hugo configuration file
-title: Schmidt DSE Fire Severity Tool (Version 0)
-
+title: Schmidt DSE Disturbance Recovery Tool
 # import hextra as module
 module:
   imports:
@@ -36,14 +35,17 @@ menu:
     - name: About
       pageRef: /about
       weight: 6
-    - name: People
-      pageRef: /people
+    - name: Roadmap
+      pageRef: /roadmap
       weight: 7
+    - name: Contact
+      pageRef: /contact
+      weight: 8
     - name: DSE ↗
       url: "https://dse.berkeley.edu/"
-      weight: 8
-    - name: GitHub
       weight: 9
+    - name: GitHub
+      weight: 10
       url: "https://github.com/SchmidtDSE"
       params:
         icon: github
@@ -55,3 +57,5 @@ params:
 
   footer:
     enable: false
+
+  enableInlineShortcodes: true

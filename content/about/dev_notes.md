@@ -2,6 +2,7 @@
 title: Developer Notes
 type: docs
 prev: docs/folder/
+weight: 4
 ---
 
 - Pages take a few seconds to load upon changing pages - this is expected
