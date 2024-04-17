@@ -18,20 +18,32 @@ markup:
 
 menu:
   main:
+    - name: Home
+      pageRef: /
+      weight: 1
+    - name: Upload
+      pageRef: /upload
+      weight: 2
+    - name: Directory
+      pageRef: /directory
+      weight: 3
     - name: Demo Map
       pageRef: /demo_map
-      weight: 1
+      weight: 4
+    - name: ⠀⠀⠀⠀
+      pageRef:
+      weight: 5
     - name: About
       pageRef: /about
-      weight: 2
+      weight: 6
     - name: People
       pageRef: /people
-      weight: 2
+      weight: 7
     - name: DSE ↗
       url: "https://dse.berkeley.edu/"
-      weight: 3
+      weight: 8
     - name: GitHub
-      weight: 5
+      weight: 9
       url: "https://github.com/SchmidtDSE"
       params:
         icon: github
