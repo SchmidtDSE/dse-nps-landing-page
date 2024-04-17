@@ -42,5 +42,4 @@ params:
     displayLogo: false
 
   footer:
-    displayCopyright: false
-    displayPoweredBy: true
+    enable: false
