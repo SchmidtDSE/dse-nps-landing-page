@@ -1,6 +1,6 @@
 # Hugo configuration file
 title: Schmidt DSE Disturbance Recovery Tool
-baseURL: "dse-nps-landing-page/"
+baseURL: "/"
 # import hextra as module
 module:
   imports:
@@ -56,7 +56,7 @@ params:
     displayTitle: false
     displayLogo: true
     logo:
-      path: /dse-nps-landing-page/static/feedback.png
+      path: /static/feedback.png
       link: https://form.asana.com/?k=cSbLLW6qj84vrOaG5XhMtw&d=68745051195273
       width: 100px
       height: 30px
@@ -67,4 +67,4 @@ params:
   enableInlineShortcodes: true
 
   assets:
-    favicon: /dse-nps-landing-page/static/favicon.ico
+    favicon: /static/favicon.ico

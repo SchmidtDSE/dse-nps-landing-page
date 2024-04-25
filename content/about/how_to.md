@@ -7,7 +7,7 @@ weight: 2
 
 ## User Process
 
-Begin by visiting the [Upload](/dse-nps-landing-page/upload) page - here you will be able to enter:
+Begin by visiting the [Upload](/upload) page - here you will be able to enter:
 
 {{% steps %}}
 
@@ -24,11 +24,11 @@ Either:
 
 ### Affiliation
 
-The name (or acronym) for your group or organization. This is used to group individual groups' or users' disturbance analyses within the [Directory](/dse-nps-landing-page/directory).
+The name (or acronym) for your group or organization. This is used to group individual groups' or users' disturbance analyses within the [Directory](/directory).
 
 ### Fire Event Name
 
-A unique name for this particular fire event. After analysis, you'll be able to look within your `Affiliation` and find the fire event by name in the [Directory](/dse-nps-landing-page/directory).
+A unique name for this particular fire event. After analysis, you'll be able to look within your `Affiliation` and find the fire event by name in the [Directory](/directory).
 
 {{% /steps %}}
 
@@ -60,4 +60,4 @@ Attempt to fetch [Rangeland Analysis Platform](https://rangelands.app/rap/) biom
 
 {{% /steps %}}
 
-If all four of these processes succeed, you will be presented download links for all of the analytical products generated, including an interactive map visualizing the results. If, at any time, you'd like to access these again, you can simply visit the [Directory](/dse-nps-landing-page/directory), where you can select your affiliation and fire event name once more to access these files again.
+If all four of these processes succeed, you will be presented download links for all of the analytical products generated, including an interactive map visualizing the results. If, at any time, you'd like to access these again, you can simply visit the [Directory](/directory), where you can select your affiliation and fire event name once more to access these files again.
