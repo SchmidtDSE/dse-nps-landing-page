@@ -11,8 +11,8 @@ width: full
 
 {{< cards >}}
 
-{{< card link="/dse-nps-landing-page/about" title="About" image="/static/about.png" subtitle="About this tool" >}}
-{{< card link="/dse-nps-landing-page/about/how_to" title="How To" image="/static/how_to.png" subtitle="How to get started" >}}
-{{< card link="/dse-nps-landing-page/upload" title="Upload" image="/static/upload.png" subtitle="Upload a fire perimeter" >}}
+{{< card link="/about" title="About" image="/static/about.png" subtitle="About this tool" >}}
+{{< card link="/about/how_to" title="How To" image="/static/how_to.png" subtitle="How to get started" >}}
+{{< card link="/upload" title="Upload" image="/static/upload.png" subtitle="Upload a fire perimeter" >}}
 
 {{< /cards >}}
