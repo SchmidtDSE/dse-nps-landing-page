@@ -1,7 +1,6 @@
 ---
-title: Developer Notes
+title: Initial updates - April 2024
 type: docs
-prev: docs/folder/
 weight: 4
 ---
 

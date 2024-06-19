@@ -12,6 +12,6 @@ This tool uses publicly available satellite imagery (currently, the European Spa
 {{< cards >}}
 {{< card link="/about/how_to/" title="How To" subtitle="How to get started using the tool, using a fire perimeter and date range" icon="map" >}}
 {{< card link="/about/methodology/" title="Methodology" subtitle="Underlying methodology and assumptions for disturbance severity metrics used within the tool" icon="academic-cap" >}}
-{{< card link="/about/dev_notes/" title="Developer Notes" subtitle="Development notes regarding known issues with the tool" icon="code" >}}
+{{< card link="/about/dev_updates/" title="Developer Notes" subtitle="Development notes regarding known issues with the tool" icon="code" >}}
 {{< card link="/about/key_references/" title="Key References" subtitle="Key publications, whitepapers, and articles that informed the tool's methodological approach" icon="library" >}}
 {{< /cards >}}
