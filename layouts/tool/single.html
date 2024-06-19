@@ -17,17 +17,34 @@
     Loading ...
   </div>
   <iframe
-    src="{{ .Params.iframe }}"
+    id="iframeWrapper"
     width="100%"
+    height="100%"
     frameborder="0"
-    onload="document.getElementById('loading').style.display='none';"
   ></iframe>
 </div>
 <script>
   let navbarHeight = document.querySelector(".nav-container").offsetHeight;
   let remainingHeight = window.innerHeight - navbarHeight;
-  document.querySelector(
-    'iframe[src="{{ .Params.iframe }}"]'
-  ).style.height = `${remainingHeight}px`;
+  let iframe = document.querySelector("#iframeWrapper");
+
+  // Get the 'dev' query parameter
+  let params = new URLSearchParams(window.location.search);
+  let dev = params.get("dev");
+
+  // Conditionally set the iframe source
+  if (dev === "true") {
+    iframe.src = "{{ .Params.dev_iframe }}";
+  } else {
+    iframe.src = "{{ .Params.prod_iframe }}";
+  }
+
+  // Set the height of the iframe
+  iframe.style.height = `${remainingHeight}px`;
+
+  // Hide the loading spinner when the iframe is loaded
+  iframe.onload = function () {
+    document.getElementById("loading").style.display = "none";
+  };
 </script>
 {{ end }}
