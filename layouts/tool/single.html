@@ -35,6 +35,7 @@
   // Conditionally set the iframe source
   if (dev === "true") {
     iframe.src = "{{ .Params.dev_iframe }}";
+    iframe.style.border = "5px solid red"; // red border color for dev mode
   } else {
     iframe.src = "{{ .Params.prod_iframe }}";
   }
