@@ -2,115 +2,99 @@
 title: Roadmap
 ---
 
-## Our Approach
+## Development Status
 
-NPS park managers confronting ecosystem vulnerability in a changing climate need to navigate a wide range of academic literature, expert opinion, inventory and monitoring data, research results, and public opinion when making decisions regarding vegetation management—especially post-fire or after other large-scale disturbances.
-
-DSE's intent is to create a "toolbox" of analytical approaches to synthesize these information sources and support NPS managers in making resource-efficient decisions regarding post-disturbance vegetation management.
-
-### Design Goals
-
-The modules are designed to be:
-
-- **Flexible** — allow users to quickly import their own data sources, export intermediate steps, and modify analysis approaches for their particular needs
-- **Scalable** — designed to work across environments, park unit sizes, and resource constraints
-- **Modular** — each works in isolation, or in any combination, adding to one another when used together
-
----
-
-## Module Status
-
-| Module | Status | Description |
-|:-------|:-------|:------------|
-| **Disturbance Severity** | **Beta** | Operational, actively used by NPS partners at Joshua Tree and Mojave National Preserve |
-| **Vegetation Modeling (josh)** | **Beta** | Core simulation engine complete; model development and parameterization ongoing |
-| **Resource Optimization** | In Design | Architecture defined; actively seeking input on approach |
-| **Monitoring & Validation** | Long-term | Approach in development; will close feedback loop through remote sensing validation and model updating |
+| Module | Status | Current Focus |
+|:-------|:-------|:--------------|
+| **Disturbance Severity** | **Beta** | Operational; actively used by NPS partners at Joshua Tree and Mojave National Preserve |
+| **Vegetation Modeling (josh)** | **Beta** | Core simulation engine complete; model parameterization and validation ongoing |
+| **Resource Optimization** | In Design | Architecture defined; seeking input on approach |
+| **Monitoring & Validation** | Long-term | Approach in development |
 
 ---
 
 ## Disturbance Severity
 
-### Why we built it
+**Status: Beta**
 
-Federal agencies produce burn severity maps after major fires, but these typically arrive weeks after the event and use calibrations designed for high-biomass forests. In low-biomass environments like the Mojave Desert, standard spectral indices underestimate severity because there's less vegetation signal to begin with.
+The Disturbance Severity tool is operational and in active use with NPS partners.
 
-Our partners needed severity assessments that were: (1) faster—available within days, not weeks; (2) tuned for their landscape; and (3) directly linked to vegetation community data for grant applications and internal reporting.
-
-### Current capabilities
-
+**Current capabilities:**
 - Generate severity maps within days of a fire, given cloud-free imagery
 - Provide Relativized Burn Ratio (RBR) appropriate for low-biomass environments, alongside absolute metrics (dNBR)
 - Link severity to vegetation community data for impact reporting
 - Output cloud-optimized GeoTIFFs for downstream use
 
+**Development history:**
+- Initial development driven by partner need for faster severity assessments tuned for desert environments
+- Partners were receiving dNBR from federal agencies but needed RBR for low-biomass landscapes
+
 ---
 
-## Vegetation Modeling with josh
+## Vegetation Modeling (josh)
 
-### Why we're building it
+**Status: Beta**
 
-Empirical models need data that are both spatially and temporally rich at the taxonomic resolution of interest. In practice, this almost never exists. To model something like Joshua tree recovery specifically, we would need decades of repeated measurements across the landscape—data that don't exist and likely never will.
+The [`josh`](https://joshsim.org) simulation engine is complete and functional. Current work focuses on model development and parameterization for specific vegetation communities.
 
-Instead, we take a "bottom-up" approach: building vegetation models from first principles using life history data from the ecological literature.
-
-### Current capabilities
-
-[`josh`](https://joshsim.org) is an open-source, spatially explicit simulation engine that makes process-based modeling accessible:
-
+**Current capabilities:**
 - Domain-specific language for specifying organisms, life stages, demographic rates, and environmental interactions
 - Runs in browser for small simulations, scales to cloud computing for landscape-level analysis
 - Transparent models that ecologists can inspect, critique, and modify
 
-### In progress
-
+**In progress:**
 - Model parameterization and validation for Mojave Desert vegetation communities
-- Integration with Disturbance Severity outputs
+- Integration with Disturbance Severity outputs (automatic loading of severity rasters)
 - Climate scenario incorporation
+
+**Next steps:**
+- Complete baseline Joshua tree community model
+- Parameterize fire response and management intervention effects
+- Validation against available monitoring data
 
 ---
 
 ## Resource Optimization
 
-### The problem
+**Status: In Design**
 
-After characterizing a disturbance and building vegetation models, managers face a combinatorial explosion of choices: Where to seed? Where to plant? Remove invasives first? How much labor per hectare? What if seed supply is limited? What if seedlings need to be near roads for watering access?
+Resource Optimization will sit between manager intent and vegetation modeling, helping structure and compare intervention strategies.
 
-### Planned approach
+**Planned capabilities:**
+- Translate management constraints (seed availability, labor, budget, logistics) into simulation specifications
+- Drive josh to run appropriate scenarios (many replicates, multiple strategies)
+- Structure side-by-side comparison of projected outcomes
+- Surface tradeoffs between cost, effort, and ecological outcomes
 
-Resource Optimization will sit between manager intent and vegetation modeling:
+**Design considerations:**
+- How to specify constraints in a flexible but structured way
+- What output metrics best support manager decision-making
+- How to present uncertainty in strategy comparisons
 
-1. Take constraints (seed, labor, budget, logistics) and candidate strategies
-2. Drive josh to run appropriate simulations (many replicates per scenario)
-3. Structure comparison of outputs so managers can evaluate tradeoffs
-
-### We want input
-
-We're actively seeking input on how to approach these challenges. [Contact us](/contact) if you have experience with post-fire resource allocation or ideas about scenario comparison.
+**We want input:** If you have experience with post-fire resource allocation or ideas about scenario comparison, please [contact us](/contact).
 
 ---
 
 ## Monitoring & Validation
 
-### Why it matters
+**Status: Long-term**
 
-We need to close the feedback loop. If an intervention is predicted to increase seedling survival but doesn't, we need to know—both for model improvement and future management decisions.
+This component will close the feedback loop by comparing predictions to outcomes and updating models accordingly.
 
-### Planned approaches
-
+**Planned approaches:**
 - Remote sensing validation: track whether recovery trajectories match projections
 - Long-term monitoring integration: field data to validate abundance predictions
 - Model updating: when observations diverge from predictions, feed back into parameterization
 
-This is the furthest-out component, but we're committed to building something because without it the rest is flying blind.
+We are committed to developing validation approaches because adaptive management requires knowing whether interventions achieved their intended effects.
 
 ---
 
 ## Related Work
 
-### ESIIL Sagebrush Proposal
+### ESIIL Sagebrush Working Group
 
-This work connects to a related ESIIL working group proposal focused on sagebrush ecosystems, sharing much of the same workflow philosophy. Key elements include:
+This work connects to a related ESIIL working group proposal focused on sagebrush ecosystems, sharing much of the same workflow philosophy:
 
 - Phased approach: (1) stable baseline models, (2) add intervention capabilities, (3) climate scenario analysis
 - Emphasis on RAD framework (Resist-Accept-Direct) for management decisions
@@ -120,7 +104,7 @@ This work connects to a related ESIIL working group proposal focused on sagebrus
 
 Resist-Accept-Direct is an NPS management paradigm for decision-making under climate change:
 
-- **Resist:** try to maintain historical conditions
+- **Resist:** maintain historical conditions
 - **Accept:** allow system to change along current trajectory
 - **Direct:** actively guide system toward preferred new state
 

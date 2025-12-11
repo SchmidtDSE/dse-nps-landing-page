@@ -9,14 +9,18 @@ The **DSE Disturbance Toolbox** is a suite of tools for post-fire decision suppo
 
 After a wildfire, land managers face a "decision crush": they need to rapidly assess damage, predict vegetation recovery trajectories, decide on management interventions, and eventually evaluate whether those interventions worked—all under time pressure, budget constraints, and deep uncertainty.
 
-## Our Approach
+## The Four Questions
 
-The toolbox addresses four sequential questions that every manager must answer:
+The toolbox is organized around four sequential questions that every manager must answer after a disturbance:
 
-1. **What happened?** — Disturbance Severity assessment using satellite imagery
-2. **What is going to happen?** — Vegetation modeling with [`josh`](https://joshsim.org)
-3. **What should we do?** — Resource optimization under constraints
-4. **Did it work?** — Monitoring and validation to close the feedback loop
+| Question | Tool | What it provides |
+|:---------|:-----|:-----------------|
+| **What happened?** | Disturbance Severity | Burn severity maps from satellite imagery, linked to vegetation community data |
+| **What is going to happen?** | Vegetation Modeling ([`josh`](https://joshsim.org)) | Spatiotemporal projections of recovery under different scenarios |
+| **What should we do?** | Resource Optimization | Structured comparisons of intervention strategies under real-world constraints |
+| **Did it work?** | Monitoring & Validation | Feedback loop comparing predictions to outcomes |
+
+Each tool addresses a distinct phase of the post-disturbance decision process, and data flows between them: severity maps feed into vegetation models, which are driven by the resource optimizer, with monitoring closing the loop.
 
 ## Why Relativized Burn Ratio?
 
@@ -30,9 +34,21 @@ Empirical models (regressions trained on observed data) require data that are bo
 
 Instead, we use process-based models built from ecological literature: germination rates, growth curves, mortality schedules, competitive interactions. The [`josh`](https://joshsim.org) simulation engine makes this approach accessible, with models that domain experts can inspect, critique, and modify.
 
+## Design Principles
+
+**Partner-driven development.** We build tools in close collaboration with land managers, prioritizing features that address real operational needs.
+
+**Transparency over black boxes.** Process-based models with inspectable logic—domain experts can examine and modify the underlying mechanisms.
+
+**Collaborative modeling.** Models as shared assets developed jointly by field ecologists, land managers, and quantitative scientists.
+
+**Honesty about uncertainty.** We quantify and communicate uncertainty rather than hiding it behind false precision.
+
+**Open tools.** All components (including josh) are open-source.
+
 {{< cards >}}
-{{< card link="/about/how_to/" title="How To" subtitle="How to get started using the tools" icon="map" >}}
-{{< card link="/about/methodology/" title="Methodology" subtitle="Technical details on severity metrics" icon="academic-cap" >}}
+{{< card link="/tools/disturbance-severity" title="Disturbance Severity" subtitle="Severity assessment tool and documentation" icon="fire" >}}
+{{< card link="/tools/vegetation-modeling" title="Vegetation Modeling" subtitle="josh simulation engine and documentation" icon="chart-bar" >}}
+{{< card link="/tools/resource-optimization" title="Resource Optimization" subtitle="Intervention comparison (in design)" icon="calculator" >}}
 {{< card link="/about/dev_notes/" title="Developer Notes" subtitle="Development notes and known issues" icon="code" >}}
-{{< card link="/about/key_references/" title="Key References" subtitle="Publications informing our approach" icon="library" >}}
 {{< /cards >}}
