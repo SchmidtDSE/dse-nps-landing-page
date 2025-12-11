@@ -1,5 +1,5 @@
 ---
-title: Upload
+title: Disturbance Severity
 type: tool
 layout: maintenance
 dev_iframe: "https://tf-titiler-dev-ohi6r6qs2a-uc.a.run.app/upload"

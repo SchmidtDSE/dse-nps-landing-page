@@ -6,7 +6,9 @@ math: true
 weight: 3
 ---
 
-The process of deriving burn severity metrics from satellite imagery typically involves comparing imagery from before and after a fire event, to determine how 'different' these images are in terms of reflective vegetation. Specifically, these metrics exploit the difference in two spectral bands provided by satellite imagery:
+## Disturbance Severity Metrics
+
+The process of deriving disturbance severity metrics from satellite imagery involves comparing imagery from before and after a disturbance event to determine how different these images are in terms of reflective vegetation. Specifically, these metrics exploit the difference in two spectral bands provided by satellite imagery:
 
 - **Near Infrared**, which is highly reflective in healthy vegetation
 - **Shortwave Infrared**, which is highly reflective in burned areas

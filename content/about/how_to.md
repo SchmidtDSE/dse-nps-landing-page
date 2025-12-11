@@ -5,9 +5,9 @@ prev: docs/folder/
 weight: 2
 ---
 
-## User Process
+## Using Disturbance Severity
 
-Begin by visiting the [Upload](/upload) page. There are two 'routes' you can take to upload a fire event, one where you upload a shapefile defining a pre-defined fire boundary, and another where you provide an appromixate idea of where the fire is.
+Begin by visiting the [Disturbance Severity](/tools/disturbance-severity) tool. There are two routes you can take to analyze a fire event: one where you upload a shapefile defining a pre-defined fire boundary, and another where you provide an approximate idea of where the fire is.
 
 In either case, you will provide the following information:
 
@@ -135,4 +135,13 @@ Attempt to fetch [Rangeland Analysis Platform](https://rangelands.app/rap/) biom
 
 {{% /steps %}}
 
-If all four of these processes succeed, you will be presented download links for all of the analytical products generated, including an interactive map visualizing the results. If, at any time, you'd like to access these again, you can simply visit the [Directory](/directory), where you can select your affiliation and fire event name once more to access these files again.
+If all four of these processes succeed, you will be presented download links for all of the analytical products generated, including an interactive map visualizing the results.
+
+---
+
+## Other Tools
+
+For information about using the other tools in the DSE Disturbance Toolbox:
+
+- **[Vegetation Modeling (josh)](/tools/josh)** — Simulate vegetation recovery trajectories
+- **[Resource Optimization](/tools/resource-optimization)** — Compare intervention strategies (in design)
