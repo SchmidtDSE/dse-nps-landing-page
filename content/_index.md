@@ -1,18 +1,30 @@
 ---
-title: Schmidt DSE Disturbance Recovery Tool
+title: DSE Disturbance Toolbox
 width: full
 ---
 
 {{< callout >}}
 
-**This tool, jointly developed between The [Eric and Wendy Schmidt Center for Data Science and Environment](https://dse.berkeley.edu/) and [The National Parks Service](https://www.nps.gov), is designed to allow users to explore the impact of disturbances on a geographic area of interest, using Sentinel-2 satellite imagery.**
+**A suite of tools for post-fire decision support, developed in partnership between UC Berkeley's [Eric and Wendy Schmidt Center for Data Science and Environment](https://dse.berkeley.edu/) and the [National Park Service](https://www.nps.gov).**
 
 {{< /callout >}}
 
 {{< cards >}}
 
-{{< card link="/about" title="About" image="/static/about.png" subtitle="About this tool" >}}
-{{< card link="/about/how_to" title="How To" image="/static/how_to.png" subtitle="How to get started" >}}
-{{< card link="/upload" title="Upload" image="/static/upload.png" subtitle="Upload a fire perimeter" >}}
+{{< card link="/tools/disturbance-severity" title="Disturbance Severity" subtitle="Generate burn severity maps from satellite imagery" image="/flavor/severity.png" >}}
+
+{{< card link="/tools/vegetation-modeling" title="Vegetation Modeling" subtitle="Simulate recovery trajectories with josh" image="/flavor/vegetation_modelling.png" >}}
+
+{{< card link="/tools/resource-optimization" title="Resource Optimization" subtitle="Compare intervention strategies under constraints" image="/flavor/resource_optimization.png" >}}
 
 {{< /cards >}}
+
+NPS park managers confronting ecosystem vulnerability in a changing climate must navigate academic literature, expert opinion, inventory and monitoring data, research results, and public input when making decisions regarding vegetation management—especially post-fire or after other large-scale disturbances.
+
+This toolbox synthesizes these information sources to support managers in making resource-efficient decisions regarding post-disturbance vegetation management:
+
+- **Assess disturbance severity** from satellite imagery, with metrics calibrated for low-biomass environments
+- **Project vegetation recovery** under different climate and management scenarios using process-based simulation
+- **Compare intervention strategies** under real-world constraints like seed availability, labor, and budget
+
+![Toolbox workflow](/static/user_journey.png)

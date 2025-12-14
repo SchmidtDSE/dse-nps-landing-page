@@ -1,5 +1,5 @@
 # Hugo configuration file
-title: Schmidt DSE Disturbance Recovery Tool
+title: DSE Disturbance Toolbox
 baseURL: "/"
 # import hextra as module
 module:
@@ -21,33 +21,26 @@ menu:
     - name: Home
       pageRef: /
       weight: 1
-    - name: Upload
-      pageRef: /upload
+    - name: Tools
+      pageRef: /tools
       weight: 2
-    - name: Directory
-      pageRef: /directory
-      weight: 3
-    - name: Demo Map
-      pageRef: /demo_map
-      weight: 4
-    - name: ⠀⠀⠀⠀
-      pageRef:
-      weight: 5
     - name: About
       pageRef: /about
-      weight: 6
+      weight: 3
     - name: Roadmap
       pageRef: /roadmap
-      weight: 7
+      weight: 4
     - name: Contact
       pageRef: /contact
-      weight: 8
-    - name: DSE ↗
+      weight: 5
+    - name: DSE
       url: "https://dse.berkeley.edu/"
-      weight: 9
+      weight: 6
+      params:
+        icon: external-link
     - name: GitHub
-      weight: 10
-      url: "https://github.com/SchmidtDSE"
+      weight: 7
+      url: "https://github.com/orgs/SchmidtDSE/teams/disturbance-recovery/repositories"
       params:
         icon: github
 

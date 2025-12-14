@@ -1,0 +1,14 @@
+/* Custom styling for josh references */
+.josh {
+  color: #167539;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+/* Also style links containing josh */
+a.josh {
+  color: #167539;
+}
+
+a.josh:hover {
+  color: #167539;
+}
