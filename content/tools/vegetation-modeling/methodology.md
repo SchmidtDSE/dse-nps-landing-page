@@ -17,6 +17,22 @@ These parameters are estimated from ecological literature and targeted field stu
 
 ---
 
+## The <span class="josh">josh</span> Simulation Engine
+
+Vegetation Modeling uses [<span class="josh">josh</span>](https://joshsim.org), a domain-specific language and simulation platform developed by DSE. <span class="josh">josh</span> addresses three challenges in ecological modeling identified by Töpper et al. (2025) and others:
+
+1. **Accessibility**: General Ecological Models (GEMs) offer powerful components but may struggle with landscape-level applications and ecosystem-specific processes (Purves et al., 2013). <span class="josh">josh</span>'s DSL uses friendly syntax inspired by HyperTalk (Wheeler, 2004), lowering the barrier for ecologists without extensive programming backgrounds.
+
+2. **Flexibility**: Unlike frameworks with rigid structural assumptions, <span class="josh">josh</span> provides library-like components that can express sophisticated patch-based or agent-based logic, including stochastic, spatial, and stateful operations.
+
+3. **Scalability**: Portable, scalable performance typically requires difficult systems-level programming (Breitwieser et al., 2023). <span class="josh">josh</span> compiles to both JVM and WebAssembly, enabling seamless scaling from browser-based prototyping to distributed cloud execution without code changes.
+
+### State-Based Agent Modeling
+
+<span class="josh">josh</span> supports highly stateful agent-based approaches. For example, a Joshua tree model defines state transitions between life stages (Dead, Juvenile, Fire, Burned, Recovered) with probabilistic transitions governed by environmental conditions and demographic parameters. This approach captures the complex dynamics of post-fire recovery including mortality, resprouting, and recruitment.
+
+---
+
 ## Why This Approach?
 
 **The data problem**: To build an empirical model of Joshua tree recovery, we would need spatially comprehensive, multi-decadal monitoring data at the species level. Such data don't exist for most ecosystems.
