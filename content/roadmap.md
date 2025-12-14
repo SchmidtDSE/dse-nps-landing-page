@@ -7,7 +7,7 @@ title: Roadmap
 | Module | Status | Current Focus |
 |:-------|:-------|:--------------|
 | **Disturbance Severity** | **Beta** | Operational; actively used by NPS partners at Joshua Tree and Mojave National Preserve |
-| **Vegetation Modeling (josh)** | **Beta** | Core simulation engine complete; model parameterization and validation ongoing |
+| **Vegetation Modeling (<span class="josh">josh</span>)** | **Beta** | Core simulation engine complete; model parameterization and validation ongoing |
 | **Resource Optimization** | In Design | Architecture defined; seeking input on approach |
 | **Monitoring & Validation** | Long-term | Approach in development |
 
@@ -15,7 +15,7 @@ title: Roadmap
 
 ## Disturbance Severity
 
-**Status: Beta**
+**Status: Beta** — [Methodology](/tools/disturbance-severity/methodology)
 
 The Disturbance Severity tool is operational and in active use with NPS partners.
 
@@ -31,11 +31,11 @@ The Disturbance Severity tool is operational and in active use with NPS partners
 
 ---
 
-## Vegetation Modeling (josh)
+## Vegetation Modeling (<span class="josh">josh</span>)
 
-**Status: Beta**
+**Status: Beta** — [Methodology](/tools/vegetation-modeling/methodology)
 
-The [`josh`](https://joshsim.org) simulation engine is complete and functional. Current work focuses on model development and parameterization for specific vegetation communities.
+The [<span class="josh">josh</span>](https://joshsim.org) simulation engine is complete and functional. Current work focuses on model development and parameterization for specific vegetation communities.
 
 **Current capabilities:**
 - Domain-specific language for specifying organisms, life stages, demographic rates, and environmental interactions
@@ -56,13 +56,13 @@ The [`josh`](https://joshsim.org) simulation engine is complete and functional. 
 
 ## Resource Optimization
 
-**Status: In Design**
+**Status: In Design** — [Methodology](/tools/resource-optimization/methodology)
 
 Resource Optimization will sit between manager intent and vegetation modeling, helping structure and compare intervention strategies.
 
 **Planned capabilities:**
 - Translate management constraints (seed availability, labor, budget, logistics) into simulation specifications
-- Drive josh to run appropriate scenarios (many replicates, multiple strategies)
+- Drive <span class="josh">josh</span> to run appropriate scenarios (many replicates, multiple strategies)
 - Structure side-by-side comparison of projected outcomes
 - Surface tradeoffs between cost, effort, and ecological outcomes
 
@@ -87,25 +87,3 @@ This component will close the feedback loop by comparing predictions to outcomes
 - Model updating: when observations diverge from predictions, feed back into parameterization
 
 We are committed to developing validation approaches because adaptive management requires knowing whether interventions achieved their intended effects.
-
----
-
-## Related Work
-
-### ESIIL Sagebrush Working Group
-
-This work connects to a related ESIIL working group proposal focused on sagebrush ecosystems, sharing much of the same workflow philosophy:
-
-- Phased approach: (1) stable baseline models, (2) add intervention capabilities, (3) climate scenario analysis
-- Emphasis on RAD framework (Resist-Accept-Direct) for management decisions
-- Collaboration with NC RISCC, NC CASC, USGS researchers
-
-### RAD Framework
-
-Resist-Accept-Direct is an NPS management paradigm for decision-making under climate change:
-
-- **Resist:** maintain historical conditions
-- **Accept:** allow system to change along current trajectory
-- **Direct:** actively guide system toward preferred new state
-
-The toolbox is designed to support RAD decision-making by quantifying projected outcomes under different strategies.

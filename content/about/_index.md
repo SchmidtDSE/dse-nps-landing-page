@@ -16,7 +16,7 @@ The toolbox is organized around four sequential questions that every manager mus
 | Question | Tool | What it provides |
 |:---------|:-----|:-----------------|
 | **What happened?** | Disturbance Severity | Burn severity maps from satellite imagery, linked to vegetation community data |
-| **What is going to happen?** | Vegetation Modeling ([`josh`](https://joshsim.org)) | Spatiotemporal projections of recovery under different scenarios |
+| **What is going to happen?** | Vegetation Modeling ([<span class="josh">josh</span>](https://joshsim.org)) | Spatiotemporal projections of recovery under different scenarios |
 | **What should we do?** | Resource Optimization | Structured comparisons of intervention strategies under real-world constraints |
 | **Did it work?** | Monitoring & Validation | Feedback loop comparing predictions to outcomes |
 
@@ -32,7 +32,7 @@ Our Disturbance Severity tool provides Relativized Burn Ratio (RBR), which scale
 
 Empirical models (regressions trained on observed data) require data that are both spatially and temporally rich at the taxonomic resolution of interest. To model Joshua tree recovery specifically, we would need decades of repeated measurements across the landscape—data that don't exist.
 
-Instead, we use process-based models built from ecological literature: germination rates, growth curves, mortality schedules, competitive interactions. The [`josh`](https://joshsim.org) simulation engine makes this approach accessible, with models that domain experts can inspect, critique, and modify.
+Instead, we use process-based models built from ecological literature: germination rates, growth curves, mortality schedules, competitive interactions. The [<span class="josh">josh</span>](https://joshsim.org) simulation engine makes this approach accessible, with models that domain experts can inspect, critique, and modify.
 
 ## Design Principles
 
@@ -44,7 +44,7 @@ Instead, we use process-based models built from ecological literature: germinati
 
 **Honesty about uncertainty.** We quantify and communicate uncertainty rather than hiding it behind false precision.
 
-**Open tools.** All components (including josh) are open-source.
+**Open tools.** All components (including <span class="josh">josh</span>) are open-source.
 
 {{< cards >}}
 {{< card link="/tools/disturbance-severity" title="Disturbance Severity" subtitle="Severity assessment tool and documentation" icon="fire" >}}

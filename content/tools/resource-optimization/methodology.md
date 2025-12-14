@@ -46,7 +46,7 @@ A manager might say: "I have 10 Joshua tree seedlings, limited labor, and seedli
 Resource Optimization would:
 
 1. Translate these constraints into three simulation specifications
-2. Drive josh to run each scenario (e.g., 1000 replicates each)
+2. Drive <span class="josh">josh</span> to run each scenario (e.g., 1000 replicates each)
 3. Collect outputs (spatiotemporal rasters of predicted vegetation)
 4. Structure comparison: "Strategy A: 15% occupancy at year 30, high variance. Strategy B: 35% occupancy, moderate variance. Strategy C: 40% occupancy but 3× labor cost."
 
