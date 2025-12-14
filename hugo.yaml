@@ -40,7 +40,7 @@ menu:
         icon: external-link
     - name: GitHub
       weight: 7
-      url: "https://github.com/SchmidtDSE"
+      url: "https://github.com/orgs/SchmidtDSE/teams/disturbance-recovery/repositories"
       params:
         icon: github
 

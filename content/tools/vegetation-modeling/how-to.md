@@ -16,13 +16,31 @@ For full documentation on using the <span class="josh">josh</span> simulation en
 
 ## Planned Toolbox Integration
 
-When using <span class="josh">josh</span> within the Disturbance Toolbox workflow:
+When using <span class="josh">josh</span> within the Disturbance Toolbox workflow will involve:
 
-1. **Obtain a severity raster** from [Disturbance Severity](/tools/disturbance-severity)
-2. **Load the raster** into a pre-parameterized <span class="josh">josh</span> model as initial conditions
-3. **Configure scenarios** (climate projections, management interventions)
-4. **Run simulations** with multiple replicates to characterize uncertainty
-5. **Export outputs** for analysis or comparison in [Resource Optimization](/tools/resource-optimization)
+{{% steps %}}
+
+### Step 1
+
+**Obtain a disturbance severity map** from [Disturbance Severity](/tools/disturbance-severity)
+
+### Step 2
+
+Using the [Vegetation Modelling](/tools/vegetation-modeling/) tool, **import the disturbance severity map** into a parameterized <span class="josh">josh</span> model for the target ecosystem, as initial conditions indicating where the disturbance occured and how severe it was
+
+### Step 3
+
+**Configure scenarios** with relevant external data (likely external climate data such as projections of temperature, precipitation, for example, or geographic sources such as a digital elevation map for elevation)
+
+### Step 4
+
+**Run simulation ensembles** with multiple replicates to properly characterize uncertainty
+
+### Step 5
+
+**Export outputs** for vegetation impact analysis, or comparison with management intervention outcomes in [Resource Optimization](/tools/resource-optimization)
+
+{{% /steps %}}
 
 ---
 

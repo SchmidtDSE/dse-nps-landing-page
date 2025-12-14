@@ -8,7 +8,7 @@ weight: 1
 Disturbance Severity uses Sentinel-2 satellite imagery to generate burn severity maps by comparing pre-fire and post-fire conditions. It provides Relativized Burn Ratio (RBR)—appropriate for low-biomass environments like the Mojave Desert—alongside standard dNBR metrics, and links severity to vegetation community data for immediate impact reporting.
 
 {{< cards >}}
-{{< card link="https://tf-rest-burn-severity-prod-ohi6r6qs2a-uc.a.run.app/upload" title="Launch Disturbance Severity Tool" subtitle="External link" image="/static/about.png" >}}
+{{< card link="https://tf-rest-burn-severity-prod-ohi6r6qs2a-uc.a.run.app/upload" title="Launch Disturbance Severity Tool" subtitle="External link" image="/flavor/severity.png" >}}
 {{< /cards >}}
 
 ## Why RBR?

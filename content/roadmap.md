@@ -13,7 +13,11 @@ title: Roadmap
 
 ---
 
-## Disturbance Severity
+## Module Details
+
+{{< tabs items="Disturbance Severity,Vegetation Modeling,Resource Optimization,Monitoring & Validation" >}}
+
+{{< tab >}}
 
 **Status: Beta** — [Methodology](/tools/disturbance-severity/methodology)
 
@@ -29,11 +33,11 @@ The Disturbance Severity tool is operational and in active use with NPS partners
 - Initial development driven by partner need for faster severity assessments tuned for desert environments
 - Partners were receiving dNBR from federal agencies but needed RBR for low-biomass landscapes
 
----
+{{< /tab >}}
 
-## Vegetation Modeling (<span class="josh">josh</span>)
+{{< tab >}}
 
-**Status: Beta** — [Methodology](/tools/vegetation-modeling/methodology)
+**Status: Beta** — [Methodology](/tools/vegetation-modeling/methodology) | [<span class="josh">josh</span> Website](https://joshsim.org)
 
 The [<span class="josh">josh</span>](https://joshsim.org) simulation engine is complete and functional. Current work focuses on model development and parameterization for specific vegetation communities.
 
@@ -52,9 +56,9 @@ The [<span class="josh">josh</span>](https://joshsim.org) simulation engine is c
 - Parameterize fire response and management intervention effects
 - Validation against available monitoring data
 
----
+{{< /tab >}}
 
-## Resource Optimization
+{{< tab >}}
 
 **Status: In Design** — [Methodology](/tools/resource-optimization/methodology)
 
@@ -73,9 +77,9 @@ Resource Optimization will sit between manager intent and vegetation modeling, h
 
 **We want input:** If you have experience with post-fire resource allocation or ideas about scenario comparison, please [contact us](/contact).
 
----
+{{< /tab >}}
 
-## Monitoring & Validation
+{{< tab >}}
 
 **Status: Long-term**
 
@@ -87,3 +91,7 @@ This component will close the feedback loop by comparing predictions to outcomes
 - Model updating: when observations diverge from predictions, feed back into parameterization
 
 We are committed to developing validation approaches because adaptive management requires knowing whether interventions achieved their intended effects.
+
+{{< /tab >}}
+
+{{< /tabs >}}
