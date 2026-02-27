@@ -3,7 +3,7 @@ title: Vegetation Modeling
 weight: 2
 ---
 
-**Status: Beta** — Core engine complete, model development ongoing
+**Status: Beta**  -  Core engine complete, model development ongoing
 
 Vegetation Modeling is an orchestration layer around the [<span class="josh">josh</span>](https://joshsim.org) simulation engine. It takes fire severity boundaries from [Disturbance Severity](/tools/disturbance-severity) as external data, runs <span class="josh">josh</span> simulations to project vegetation recovery trajectories, and structures the output to help managers understand fire impacts over time.
 
@@ -17,7 +17,7 @@ Vegetation Modeling is an orchestration layer around the [<span class="josh">jos
 
 ## Why Process-Based Modeling?
 
-Empirical models (regressions trained on observed data) require data that are both spatially and temporally rich at the taxonomic resolution of interest. To model Joshua tree recovery specifically, we would need decades of repeated measurements across the landscape—data that don't exist and likely never will.
+Empirical models (regressions trained on observed data) require data that are both spatially and temporally rich at the taxonomic resolution of interest. To model Joshua tree recovery specifically, we would need decades of repeated measurements across the landscape - data that do not currently exist.
 
 Process-based models sidestep this limitation by building from ecological literature: how fast do seedlings grow? What conditions trigger germination? How does competition affect survival? These parameters can be estimated from targeted studies even without landscape-scale monitoring data.
 
@@ -28,7 +28,7 @@ Process-based models sidestep this limitation by building from ecological litera
 Key features:
 
 - **Domain-specific language** for specifying organisms, life stages, demographic rates, and environmental interactions
-- **Scalable execution** from browser-based prototyping (via WebAssembly) to distributed cloud computing on hundreds of machines—with minimal or no code changes
+- **Scalable execution** from browser-based prototyping (via WebAssembly) to distributed cloud computing on hundreds of machines - with minimal or no code changes
 - **Cloud-native geospatial formats** including GeoTIFF and netCDF for seamless integration with fire severity rasters
 - **Transparent models** that ecologists can inspect, critique, and modify
 - **Open source** under a permissive BSD license
@@ -45,7 +45,7 @@ In the context of this toolbox:
 - **Outputs**: Spatiotemporal projections of vegetation recovery (occupancy, abundance, community composition over time)
 - **Downstream**: Outputs feed into [Resource Optimization](/tools/resource-optimization) for comparing intervention strategies
 
-A <span class="josh">josh</span> model must be parameterized and validated *before* a fire event occurs. The model knows how to respond to fire effects (mortality, reduced competition, seed bank impacts) and management interventions (seeding, planting, invasive removal), but these responses need to be built in ahead of time.
+A <span class="josh">josh</span> model must be parameterized and validated before it can produce vegetation recovery projections and resource optimization outputs. Ideally, model development is completed in advance of a fire event so that projections are available as soon as severity data are produced. However, model development can also begin after a fire occurs - management planning would then start once the model is ready. The model needs to know how to respond to fire effects (mortality, reduced competition, seed bank impacts) and management interventions (seeding, planting, invasive removal), and these responses need to be built in before simulations can run.
 
 ---
 

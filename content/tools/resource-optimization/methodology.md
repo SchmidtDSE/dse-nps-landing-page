@@ -28,14 +28,14 @@ Each strategy will be simulated many times to characterize uncertainty. How do w
 
 ## Architecture
 
-From the perspective of [Vegetation Modeling](/tools/vegetation-modeling), each scenario is a completely independent simulation. The vegetation model doesn't know or care that scenarios are being compared.
+From the perspective of [Vegetation Modeling](/tools/vegetation-modeling), each scenario is a completely independent simulation. The vegetation model treats each scenario independently.
 
 Resource Optimization's job is:
 
-1. **Cataloging** — keep track of which simulations correspond to which strategies
-2. **Triggering** — drive the vegetation model to run appropriate scenarios
-3. **Collecting** — gather outputs from completed simulations
-4. **Structuring** — present comparisons in a decision-relevant format
+1. **Cataloging**  -  keep track of which simulations correspond to which strategies
+2. **Triggering**  -  drive the vegetation model to run appropriate scenarios
+3. **Collecting**  -  gather outputs from completed simulations
+4. **Structuring**  -  present comparisons in a decision-relevant format
 
 ---
 

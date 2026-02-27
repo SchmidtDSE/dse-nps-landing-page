@@ -7,7 +7,7 @@ The **DSE Disturbance Toolbox** is a suite of tools for post-fire decision suppo
 
 ## The Problem
 
-After a wildfire, land managers face a "decision crush": they need to rapidly assess damage, predict vegetation recovery trajectories, decide on management interventions, and eventually evaluate whether those interventions worked—all under time pressure, budget constraints, and deep uncertainty.
+After a wildfire, land managers face a "decision crush": they need to rapidly assess damage, predict vegetation recovery trajectories, decide on management interventions, and eventually evaluate whether those interventions worked - all under time pressure, budget constraints, and deep uncertainty.
 
 ## The Four Questions
 
@@ -24,25 +24,23 @@ Each tool addresses a distinct phase of the post-disturbance decision process, a
 
 ## Why Relativized Burn Ratio?
 
-The core of this collaboration emerged from a need to better understand fire severity in low-biomass environments. Standard burn severity assessments use differenced Normalized Burn Ratio (dNBR), which measures absolute difference in vegetation signal. This works well in forests, but in environments like the Mojave Desert, dNBR is biased low—even complete vegetation loss produces a smaller absolute difference than a moderate fire in a high-biomass forest.
-
-Our Disturbance Severity tool provides Relativized Burn Ratio (RBR), which scales fire intensity to pre-fire conditions at each location. This means equivalent ecological damage produces equivalent severity values regardless of landscape type.
+Standard burn severity metrics like dNBR can underestimate severity in low-biomass environments. The Disturbance Severity tool provides [Relativized Burn Ratio (RBR)](/tools/disturbance-severity/methodology/#relative-metrics) and [Relative Differenced Normalized Burn Ratio (RdNBR)](/tools/disturbance-severity/methodology/#relative-metrics), both of which scale fire intensity to pre-fire conditions for more accurate assessment across landscape, alongside the traditional metric of [Differenced Normalized Burn Ratio (dNBR)](/tools/disturbance-severity/methodology/#absolute-metrics).
 
 ## Why Process-Based Modeling?
 
-Empirical models (regressions trained on observed data) require data that are both spatially and temporally rich at the taxonomic resolution of interest. To model Joshua tree recovery specifically, we would need decades of repeated measurements across the landscape—data that don't exist.
+The data required to build empirical models of species-level recovery do not currently exist for many ecosystems, and as climate conditions drive novel phenomenon, empirical approaches must reckon with out-of-sample prediction challenges.
 
-Instead, we use process-based models built from ecological literature: germination rates, growth curves, mortality schedules, competitive interactions. The [<span class="josh">josh</span>](https://joshsim.org) simulation engine makes this approach accessible, with models that domain experts can inspect, critique, and modify.
+Our [Vegetation Modeling](/tools/vegetation-modeling) approach uses process-based models parameterized from ecological literature, enabling simulation of recovery under novel conditions. While these models can be harder to parameterize and evaluate than statistical models, they can be bootstrapped from ecological literature and field observations, they are transparent and inspectable, and they are easily manipulated to evaluate counterfactuals associated with natural disturbances or management interventions. 
 
 ## Design Principles
 
-**Partner-driven development.** We build tools in close collaboration with land managers, prioritizing features that address real operational needs.
+**Partner-driven development.** Tools are developed in close collaboration with land managers, with features prioritized around operational needs.
 
-**Transparency over black boxes.** Process-based models with inspectable logic—domain experts can examine and modify the underlying mechanisms.
+**Transparency over black boxes.** Process-based models with inspectable logic - domain experts can examine and modify the underlying mechanisms.
 
 **Collaborative modeling.** Models as shared assets developed jointly by field ecologists, land managers, and quantitative scientists.
 
-**Honesty about uncertainty.** We quantify and communicate uncertainty rather than hiding it behind false precision.
+**Uncertainty quantification.** Model outputs include explicit characterization of uncertainty rather than single-point estimates.
 
 **Open tools.** All components (including <span class="josh">josh</span>) are open-source.
 

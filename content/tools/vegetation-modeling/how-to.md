@@ -5,7 +5,7 @@ weight: 1
 ---
 
 {{< callout type="info" >}}
-This tool is currently in development. We plan to use the [<span class="josh">josh</span> simulation engine](https://joshsim.org) to perform vegetation modeling analyses. We are experimenting with integration approaches in the [<span class="josh">josh</span>-toolbox-demo](https://github.com/SchmidtDSE/josh-toolbox-demo) repository.
+This tool is currently in development. We plan to use the [<span class="josh">josh</span> simulation engine](https://joshsim.org) to perform vegetation modeling analyses. Integration approaches are under development in the [<span class="josh">josh</span>-toolbox-demo](https://github.com/SchmidtDSE/josh-toolbox-demo) repository.
 {{< /callout >}}
 
 ## Getting Started with <span class="josh">josh</span>
@@ -26,7 +26,7 @@ When using <span class="josh">josh</span> within the Disturbance Toolbox workflo
 
 ### Step 2
 
-Using the [Vegetation Modelling](/tools/vegetation-modeling/) tool, **import the disturbance severity map** into a parameterized <span class="josh">josh</span> model for the target ecosystem, as initial conditions indicating where the disturbance occured and how severe it was
+Using the [Vegetation Modeling](/tools/vegetation-modeling/) tool, **import the disturbance severity map** into a parameterized <span class="josh">josh</span> model for the target ecosystem, as initial conditions indicating where the disturbance occurred and how severe it was
 
 ### Step 3
 
@@ -46,6 +46,6 @@ Using the [Vegetation Modelling](/tools/vegetation-modeling/) tool, **import the
 
 ## Current Limitations
 
-- Models must be parameterized before use—new vegetation communities or intervention types require model development
+- Models must be parameterized before use - new vegetation communities or intervention types require model development
 - Landscape-scale simulations require cloud computing resources
 - Model validation is ongoing for Mojave Desert communities

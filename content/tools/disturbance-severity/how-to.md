@@ -71,7 +71,7 @@ After processing, you will see the fire severity map displayed on the right. The
 
 #### Step 5 - Adjust severity thresholds (optional)
 
-Use the Fire Severity Color Breaks panel to adjust the threshold values that define unburned, low, moderate, and high severity classes. These thresholds affect both the map visualization and the vegetation impact statistics—the breakpoints you set here are used when calculating zonal statistics for each severity class.
+Use the Fire Severity Color Breaks panel to adjust the threshold values that define unburned, low, moderate, and high severity classes. These thresholds affect both the map visualization and the vegetation impact statistics - the breakpoints you set here are used when calculating zonal statistics for each severity class.
 
 ![Adjust thresholds](/static/tools/disturbance-severity/8.png)
 
@@ -113,7 +113,7 @@ Fill in the park unit, fire event name, and severity metric.
 
 #### Step 2 - Draw an approximate boundary
 
-Using the polygon drawing tool on the map, draw an approximate boundary around the fire area. This does not need to be precise—you will refine it after viewing the severity results.
+Using the polygon drawing tool on the map, draw an approximate boundary around the fire area. This does not need to be precise - you will refine it after viewing the severity results.
 
 #### Step 3 - Set date ranges and submit
 

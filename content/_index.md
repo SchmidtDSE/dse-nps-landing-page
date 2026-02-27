@@ -19,7 +19,7 @@ width: full
 
 {{< /cards >}}
 
-NPS park managers confronting ecosystem vulnerability in a changing climate must navigate academic literature, expert opinion, inventory and monitoring data, research results, and public input when making decisions regarding vegetation management—especially post-fire or after other large-scale disturbances.
+NPS park managers confronting ecosystem vulnerability in a changing climate must navigate academic literature, expert opinion, inventory and monitoring data, research results, and public input when making decisions regarding vegetation management - especially post-fire or after other large-scale disturbances.
 
 This toolbox synthesizes these information sources to support managers in making resource-efficient decisions regarding post-disturbance vegetation management:
 

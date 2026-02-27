@@ -3,7 +3,7 @@ title: Resource Optimization
 weight: 3
 ---
 
-**Status: In Design** — Architecture defined, seeking input on approach
+**Status: In Design**  -  Architecture defined, seeking input on approach
 
 Resource Optimization sits between manager intent and vegetation modeling. It takes real-world constraints (seed availability, labor, budget, logistics) and candidate management strategies, then drives [Vegetation Modeling](/tools/vegetation-modeling) to run appropriate simulations and structures the comparison of outcomes.
 
@@ -28,16 +28,16 @@ Each combination of treatment, location, timing, and intensity produces differen
 
 Resource Optimization will:
 
-1. **Accept constraints** — seed availability, labor hours, budget, logistical requirements (e.g., road access for watering)
-2. **Define candidate strategies** — combinations of interventions to compare
-3. **Drive simulations** — trigger [Vegetation Modeling](/tools/vegetation-modeling) runs for each strategy, with many replicates per scenario to characterize uncertainty
-4. **Structure comparisons** — present outcomes side-by-side so managers can evaluate tradeoffs
+1. **Accept constraints**  -  seed availability, labor hours, budget, logistical requirements (e.g., road access for watering)
+2. **Define candidate strategies**  -  combinations of interventions to compare
+3. **Drive simulations**  -  trigger [Vegetation Modeling](/tools/vegetation-modeling) runs for each strategy, with many replicates per scenario to characterize uncertainty
+4. **Structure comparisons**  -  present outcomes side-by-side so managers can evaluate tradeoffs
 
 ## What It Won't Do
 
-- **Tell managers what to do** — decisions involve values, risk tolerance, and local knowledge that can't be automated
-- **Test unparameterized interventions** — if you want to simulate an intervention not yet built into the vegetation model (e.g., caging seedlings to prevent herbivory), that requires model development first
-- **Solve the "optimal" problem** — optimization requires agreement on objective criteria, which we can't assume
+- **Tell managers what to do**  -  decisions involve values, risk tolerance, and local knowledge that can't be automated
+- **Test unparameterized interventions**  -  if you want to simulate an intervention not yet built into the vegetation model (e.g., caging seedlings to prevent herbivory), that requires model development first
+- **Solve the "optimal" problem**  -  optimization requires agreement on objective criteria, which we can't assume
 
 ---
 

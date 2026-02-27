@@ -19,7 +19,7 @@ title: Roadmap
 
 {{< tab >}}
 
-**Status: Beta** — [Methodology](/tools/disturbance-severity/methodology)
+**Status: Beta**  -  [Methodology](/tools/disturbance-severity/methodology)
 
 The Disturbance Severity tool is operational and in active use with NPS partners.
 
@@ -37,7 +37,7 @@ The Disturbance Severity tool is operational and in active use with NPS partners
 
 {{< tab >}}
 
-**Status: Beta** — [Methodology](/tools/vegetation-modeling/methodology) | [<span class="josh">josh</span> Website](https://joshsim.org)
+**Status: Beta**  -  [Methodology](/tools/vegetation-modeling/methodology) | [<span class="josh">josh</span> Website](https://joshsim.org)
 
 The [<span class="josh">josh</span>](https://joshsim.org) simulation engine is complete and functional. Current work focuses on model development and parameterization for specific vegetation communities.
 
@@ -60,7 +60,7 @@ The [<span class="josh">josh</span>](https://joshsim.org) simulation engine is c
 
 {{< tab >}}
 
-**Status: In Design** — [Methodology](/tools/resource-optimization/methodology)
+**Status: In Design**  -  [Methodology](/tools/resource-optimization/methodology)
 
 Resource Optimization will sit between manager intent and vegetation modeling, helping structure and compare intervention strategies.
 
@@ -90,7 +90,7 @@ This component will close the feedback loop by comparing predictions to outcomes
 - Long-term monitoring integration: field data to validate abundance predictions
 - Model updating: when observations diverge from predictions, feed back into parameterization
 
-We are committed to developing validation approaches because adaptive management requires knowing whether interventions achieved their intended effects.
+Validation is essential to adaptive management, which requires knowing whether interventions achieved their intended effects.
 
 {{< /tab >}}
 

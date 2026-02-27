@@ -32,7 +32,7 @@ $NBR = \frac{NIR - SWIR}{NIR + SWIR}$
 
 $dNBR = NBR_{prefire} - NBR_{postfire}$
 
-In theory, higher differences represent larger magnitudes of lost healthy vegetation. However, dNBR tends to be biased low in low-biomass areas or areas with sparse vegetation, because the absolute loss of vegetation—even in what would be considered an extreme fire event—is lower than the possible loss of vegetation in a higher biomass area.
+In theory, higher differences represent larger magnitudes of lost healthy vegetation. However, dNBR tends to be biased low in low-biomass areas or areas with sparse vegetation, because the absolute loss of vegetation - even in what would be considered an extreme fire event - is lower than the possible loss of vegetation in a higher biomass area.
 
 ---
 
@@ -52,15 +52,7 @@ $RBR = \frac{dNBR}{NBR_{prefire} + 1.001}$
 
 The additive constant of 1.001 serves two purposes: it ensures numerical stability when pre-fire NBR approaches zero or negative values, and it normalizes the output range for consistent interpretation.
 
-This means that, between low and high biomass areas, you would observe equivalent RBR values even if the high biomass area experienced higher dNBR values than the low biomass area.
-
----
-
-## Why We Use RBR
-
-For our partners working in the Mojave Desert and similar low-biomass environments, RBR provides a more accurate picture of fire severity than dNBR. A fire that completely consumes desert vegetation will register as "moderate" on dNBR scales calibrated for forests, but will correctly register as "high severity" on RBR.
-
-We provide both metrics in our outputs so users can choose the appropriate metric for their context and compare with federal severity products that use dNBR.
+RBR is designed to produce equivalent values across biomass levels, even when the high biomass area exhibits higher dNBR values than the low biomass area.
 
 ---
 
@@ -78,21 +70,21 @@ The system accesses Sentinel-2 data through two STAC providers, each offering th
 
 - **Microsoft Planetary Computer** (fallback): A comprehensive geospatial data platform that requires token-based authentication for asset access. This provider uses ESA's original band naming conventions (e.g., `B8A`, `B12`).
 
-The system attempts data acquisition from Element 84 first. If no imagery is available for the requested spatiotemporal extent—or if the provider is temporarily unavailable—the system automatically falls back to Microsoft Planetary Computer. This redundancy ensures data availability even when individual providers experience outages or coverage gaps.
+The system attempts data acquisition from Element 84 first. If no imagery is available for the requested spatiotemporal extent - or if the provider is temporarily unavailable - the system automatically falls back to Microsoft Planetary Computer. This redundancy ensures data availability even when individual providers experience outages or coverage gaps.
 
 ### Temporal Compositing
 
 Rather than relying on single-date imagery, which may be affected by transient atmospheric conditions or sensor artifacts, the system employs temporal median compositing. For both pre-fire and post-fire periods, all available observations within the user-specified date ranges are aggregated using the median value at each pixel location.
 
-The median operator is robust to outliers: when multiple observations are available, anomalous values caused by undetected clouds, cloud shadows, sensor noise, or atmospheric haze are naturally suppressed. For example, if five observations are available for a given pixel and one is affected by thin cirrus cloud (resulting in an anomalously high reflectance), the median will select the middle value, effectively ignoring the contaminated observation. Longer temporal windows increase the number of available observations, improving the statistical reliability of the median estimate. However, excessively long windows risk capturing phenological changes (seasonal vegetation growth or senescence) unrelated to the fire event, which would bias the severity estimate.
+The median operator is expected to be robust to outliers: when multiple observations are available, anomalous values caused by undetected clouds, cloud shadows, sensor noise, or atmospheric haze should be suppressed. For example, if five observations are available for a given pixel and one is affected by thin cirrus cloud (resulting in an anomalously high reflectance), the median will select the middle value, reducing the influence of the contaminated observation. Longer temporal windows increase the number of available observations, which we expect to improve the reliability of the median estimate. However, excessively long windows risk capturing phenological changes (seasonal vegetation growth or senescence) unrelated to the fire event, which could bias the severity estimate. We are actively [validating these assumptions](https://github.com/SchmidtDSE/fire-recovery-validation/) across a range of conditions.
 
 ### Spatial Processing
 
-User-provided boundary geometries are buffered by 20% of their width and height (capped at 0.25 degrees) prior to data acquisition. This buffering ensures complete data coverage at boundary edges and accommodates potential spatial misalignment between user-drawn boundaries and satellite data grids. All fire severity products are generated in the WGS84 geographic coordinate reference system (EPSG:4326).
+User-provided boundary geometries are buffered by 20% of their width and height (capped at 0.25 degrees) prior to data acquisition. This buffering is intended to provide complete data coverage at boundary edges and accommodates potential spatial misalignment between user-drawn boundaries and satellite data grids. All fire severity products are generated in the WGS84 geographic coordinate reference system (EPSG:4326).
 
 ### Cloud and Quality Considerations
 
-The L2A product includes a Scene Classification Layer (SCL) that identifies cloud, cloud shadow, and other quality-affecting conditions. While the current implementation does not explicitly mask using SCL, the temporal median compositing strategy implicitly reduces cloud influence: cloud-affected pixels appear as statistical outliers and are suppressed by the median operator. Users should nevertheless select date ranges that minimize cloud probability for their region of interest.
+The L2A product includes a Scene Classification Layer (SCL) that identifies cloud, cloud shadow, and other quality-affecting conditions. While the current implementation does not explicitly mask using SCL, the temporal median compositing strategy implicitly reduces cloud influence: cloud-affected pixels are expected to appear as statistical outliers and be suppressed by the median operator. Users should nevertheless select date ranges that minimize cloud probability for their region of interest.
 
 ---
 
@@ -154,7 +146,7 @@ The clipping operation employs exact geometry intersection rather than bounding-
 
 A previous version of this system included automatic fire boundary derivation using image segmentation techniques (specifically, threshold-based segmentation via scikit-image). This approach attempted to delineate fire perimeters algorithmically by identifying pixels exceeding severity thresholds and grouping them into contiguous regions.
 
-This functionality was removed due to limitations in accuracy, particularly for large fires in heterogeneous landscapes. The segmentation algorithm proved overly sensitive to landscape variability: agricultural fields, urban areas, water bodies, and other non-vegetated surfaces frequently triggered false positives or disrupted boundary continuity. Manual refinement consistently produced more accurate results than the automated approach. Exploratory analysis of this derived boundary approach is documented in [this notebook](https://github.com/SchmidtDSE/burn-severity-mapping-poc/blob/dev/exploratory/derived_boundary_eda.ipynb).
+This functionality was removed due to limitations in accuracy, particularly for large fires in heterogeneous landscapes. The segmentation algorithm proved overly sensitive to landscape variability: agricultural fields, urban areas, water bodies, and other non-vegetated surfaces frequently triggered false positives or disrupted boundary continuity. Manual refinement generally produced more accurate results than the automated approach in our testing. Exploratory analysis of this derived boundary approach is documented in [this notebook](https://github.com/SchmidtDSE/burn-severity-mapping-poc/blob/dev/exploratory/derived_boundary_eda.ipynb).
 
 Future development may reintroduce automated boundary assistance contingent on improved methodology, potentially incorporating machine learning-based segmentation or multi-criteria classification that accounts for land cover context.
 
@@ -271,8 +263,8 @@ https://storage.googleapis.com/fire-recovery-store/stac/catalog.json
 ```
 
 The catalog follows the standard STAC hierarchy:
-- **Root catalog**: `catalog.json` — contains links to all collections
-- **Collections**: `collections/{collection-id}/collection.json` — fire-severity, fire-boundaries, vegetation-matrices
-- **Items**: `collections/{collection-id}/items/{item-id}.json` — individual analysis results
+- **Root catalog**: `catalog.json`  -  contains links to all collections
+- **Collections**: `collections/{collection-id}/collection.json`  -  fire-severity, fire-boundaries, vegetation-matrices
+- **Items**: `collections/{collection-id}/items/{item-id}.json`  -  individual analysis results
 
 All COG assets referenced in STAC items are served from the same storage bucket and support HTTP range requests for efficient partial reads by web mapping clients.
