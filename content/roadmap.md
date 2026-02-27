@@ -50,6 +50,7 @@ The [<span class="josh">josh</span>](https://joshsim.org) simulation engine is c
 - Model parameterization and validation for Mojave Desert vegetation communities
 - Integration with Disturbance Severity outputs (automatic loading of severity rasters)
 - Climate scenario incorporation
+- [joshpy](https://github.com/SchmidtDSE/joshpy) Python client available for programmatic model development and batch analysis
 
 **Next steps:**
 - Complete baseline Joshua tree community model
@@ -66,7 +67,7 @@ Resource Optimization will sit between manager intent and vegetation modeling, h
 
 **Planned capabilities:**
 - Translate management constraints (seed availability, labor, budget, logistics) into simulation specifications
-- Drive <span class="josh">josh</span> to run appropriate scenarios (many replicates, multiple strategies)
+- Drive <span class="josh">josh</span> to run appropriate scenarios (many replicates, multiple strategies) using [joshpy](https://github.com/SchmidtDSE/joshpy) for programmatic simulation batches
 - Structure side-by-side comparison of projected outcomes
 - Surface tradeoffs between cost, effort, and ecological outcomes
 

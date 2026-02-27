@@ -30,7 +30,7 @@ Resource Optimization will:
 
 1. **Accept constraints**  -  seed availability, labor hours, budget, logistical requirements (e.g., road access for watering)
 2. **Define candidate strategies**  -  combinations of interventions to compare
-3. **Drive simulations**  -  trigger [Vegetation Modeling](/tools/vegetation-modeling) runs for each strategy, with many replicates per scenario to characterize uncertainty
+3. **Drive simulations**  -  trigger [Vegetation Modeling](/tools/vegetation-modeling) runs for each strategy, with many replicates per scenario to characterize uncertainty. [joshpy](https://github.com/SchmidtDSE/joshpy)'s parameter sweep and experiment tracking capabilities will underpin this simulation-driving workflow.
 4. **Structure comparisons**  -  present outcomes side-by-side so managers can evaluate tradeoffs
 
 ## What It Won't Do

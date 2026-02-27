@@ -37,6 +37,8 @@ Resource Optimization's job is:
 3. **Collecting**  -  gather outputs from completed simulations
 4. **Structuring**  -  present comparisons in a decision-relevant format
 
+[joshpy](https://github.com/SchmidtDSE/joshpy) provides the programmatic interface for triggering and tracking <span class="josh">josh</span> simulations (the Triggering and Collecting responsibilities above) via a backend service.
+
 ---
 
 ## Example Workflow

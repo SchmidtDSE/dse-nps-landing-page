@@ -47,6 +47,12 @@ In the context of this toolbox:
 
 A <span class="josh">josh</span> model must be parameterized and validated before it can produce vegetation recovery projections and resource optimization outputs. Ideally, model development is completed in advance of a fire event so that projections are available as soon as severity data are produced. However, model development can also begin after a fire occurs - management planning would then start once the model is ready. The model needs to know how to respond to fire effects (mortality, reduced competition, seed bank impacts) and management interventions (seeding, planting, invasive removal), and these responses need to be built in before simulations can run.
 
+## Python Integration (joshpy)
+
+[joshpy](https://github.com/SchmidtDSE/joshpy) is a Python client library for <span class="josh">josh</span> that enables programmatic simulation execution, parameter sweeps, and experiment tracking from Python workflows. It supports both local (JAR-based) and remote (HTTP API via `Josh Cloud` or your own infrastructure) <span class="josh">josh</span> execution, making it flexible for interactive analysis and batch processing alike.
+
+joshpy is currently used by the DSE team for model development and batch analysis, will later underpin the [Resource Optimization](/tools/resource-optimization) module, and is available for advanced users who want to integrate <span class="josh">josh</span> simulations into their own Python pipelines. See the [joshpy GitHub repository](https://github.com/SchmidtDSE/joshpy) and its associated [documentation](https://schmidtdse.github.io/joshpy/) for details.
+
 ---
 
 {{< cards >}}

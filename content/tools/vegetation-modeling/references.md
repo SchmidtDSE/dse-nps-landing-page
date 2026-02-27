@@ -9,6 +9,7 @@ weight: 3
 - **Main site**: [joshsim.org](https://joshsim.org)
 - **Source code**: [GitHub](https://github.com/SchmidtDSE/josh)
 - **Toolbox integration demo**: [<span class="josh">josh</span>-toolbox-demo](https://github.com/SchmidtDSE/josh-toolbox-demo)
+- **Python client (joshpy)**: [GitHub](https://github.com/SchmidtDSE/joshpy)
 
 ---
 
